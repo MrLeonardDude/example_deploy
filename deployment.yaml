@@ -10,5 +10,6 @@ spec:
         image: crawl_consumer
         command: ["python",  "main.py"]
       restartPolicy: Never
+      imagePullPolicy: IfNotPresent
   backoffLimit: 4
 
