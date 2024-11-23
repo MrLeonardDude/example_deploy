@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spotify_metrics_cron
+spec:
+  template:
+    spec:
+      containers:
+      - name: spotify_metrics_cron
+        image: localhost:5000/
+        command: ["python",  "main.py"]
+      restartPolicy: Never
+  backoffLimit: 4
+
