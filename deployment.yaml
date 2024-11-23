@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: spotify-metrics-cron
-        image: localhost:5000/crawl_consumer
+        image: host.minikube.internal:5000
         command: ["python",  "main.py"]
       restartPolicy: Never
   backoffLimit: 4
