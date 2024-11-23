@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: spotify-metrics-cron
-        image: crawl_consumer
+        image: crawl-consumer:0.1
         command: ["python",  "main.py"]
       restartPolicy: Never
   backoffLimit: 4
