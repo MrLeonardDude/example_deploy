@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spotify-cfg
+  namespace: spotify-metrics
+data:
+  SPOTIFY_URL: "https://accounts.spotify.com/"
