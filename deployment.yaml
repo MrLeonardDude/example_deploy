@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: spotify-metrics-cron
+  namespace: spotify-metrics
 spec:
   template:
     spec:
