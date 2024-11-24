@@ -9,10 +9,10 @@ spec:
       - name: spotify-metrics-cron
         image: crawl-consumer:0.1
         command: ["python",  "main.py"]
-      restartPolicy: Never
-      envFrom:
-        - configMapRef:
-            name: spotify-cfg
-        - secretRef:
-            name: spotify-secret
+        restartPolicy: Never
+        envFrom:
+          - configMapRef:
+              name: spotify-cfg
+          - secretRef:
+              name: spotify-secret
   backoffLimit: 4
