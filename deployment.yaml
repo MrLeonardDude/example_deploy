@@ -9,7 +9,7 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: spotify-metrics-cron
-        image: crawl-consumer:0.2
+        image: crawl-consumer:0.3
         command: ["python",  "main.py"]
         envFrom:
           - configMapRef:
