@@ -5,6 +5,7 @@ metadata:
 spec:
   template:
     spec:
+      restartPolicy: OnFailure
       containers:
       - name: spotify-metrics-cron
         image: crawl-consumer:0.1
