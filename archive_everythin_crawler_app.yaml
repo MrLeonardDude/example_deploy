@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/MrLeonardDude/example_deploy.git
-    targetRevision: HEAD
+    targetRevision: archiveEverything
     path: .
   destination:
     server: https://kubernetes.default.svc
