@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: archive-everything-cron
+  namespace: archive-everything
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: archive-everything-crawler-cron
+        image: crawl-consumer:0.4
+        command: ["python",  "main.py"]
+        envFrom:
+          - configMapRef:
+              name: archive-everything-crawler-cfg
+          - secretRef:
+              name: archive-everything-crawler-secret
+  backoffLimit: 4

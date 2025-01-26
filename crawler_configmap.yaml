@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: archive-everything-crawler-cfg
+  namespace: archive-everything
+data:
+  test: 'TEST'
