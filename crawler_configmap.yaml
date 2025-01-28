@@ -4,4 +4,4 @@ metadata:
   name: archive-everything-crawler-cfg
   namespace: archive-everything
 data:
-  test: 'TEST'
+  ARCHIVER_SERVER: 'archiver-server'
