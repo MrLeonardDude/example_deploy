@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: archive-everything-archiver
+  namespace: archive-everything
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: archive-everything-archiver
+        image: archive-everything/archiver:latest
+        command: ["python",  "main.py"]
+        envFrom:
+          - configMapRef:
+              name: archive-everything-crawler-cfg
+          - secretRef:
+              name: archive-everything-crawler-secret
+  backoffLimit: 4
