@@ -22,7 +22,6 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        port: 50001
         image: archive-everything/archiver:latest
         command: ["python",  "main.py"]
         envFrom:
