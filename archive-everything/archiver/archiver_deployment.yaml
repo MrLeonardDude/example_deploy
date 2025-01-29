@@ -1,15 +1,20 @@
-apiVersion: batch/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: archive-everything-archiver
   namespace: archive-everything
 spec:
+  selector:
+    matchLabels:
+      app: archive-everything-archiver
+  replicas: 1
   template:
     spec:
-      restartPolicy: OnFailure
+      metadata:
+        app: archive-everything-archiver
       containers:
       - name: archive-everything-archiver
-        replicas: 1
+        port: 50001
         image: archive-everything/archiver:latest
         command: ["python",  "main.py"]
         envFrom:
