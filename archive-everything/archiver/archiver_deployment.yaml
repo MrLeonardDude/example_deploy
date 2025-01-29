@@ -11,7 +11,8 @@ spec:
   template:
     spec:
       metadata:
-        app: archive-everything-archiver
+        labels:
+          app: archive-everything-archiver
       containers:
       - name: archiver-pods
         port: 50001
