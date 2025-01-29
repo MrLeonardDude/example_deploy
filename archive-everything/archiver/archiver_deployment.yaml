@@ -22,7 +22,7 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        image: archive-everything/archiver:123
+        image: archive-everything-archiver:123
         command: ["python",  "main.py"]
         envFrom:
           - configMapRef:
