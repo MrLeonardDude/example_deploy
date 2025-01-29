@@ -24,6 +24,8 @@ spec:
             cpu: "500m"
         image: archive-everything-archiver:126
         command: ["python",  "main.py"]
+        ports:
+          - containerPort: 50051
         envFrom:
           - configMapRef:
               name: archive-everything-archiver-cfg
