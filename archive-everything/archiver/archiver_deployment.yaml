@@ -6,13 +6,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: archive-everything-archiver
+      app: archiver
   replicas: 1
   template:
     spec:
       metadata:
         labels:
-          app: archive-everything-archiver
+          app: archiver
       containers:
       - name: archiver-pods
         port: 50001
@@ -23,4 +23,3 @@ spec:
               name: archive-everything-archiver-cfg
           - secretRef:
               name: archive-everything-archiver-secret
-  backoffLimit: 4
