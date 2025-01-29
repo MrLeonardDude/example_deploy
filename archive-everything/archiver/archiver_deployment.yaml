@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: archive-everything-archiver
+  name: archive-everything-archiver-deploy
   namespace: archive-everything
 spec:
   selector:
@@ -13,7 +13,7 @@ spec:
       metadata:
         app: archive-everything-archiver
       containers:
-      - name: archive-everything-archiver
+      - name: archiver-pods
         port: 50001
         image: archive-everything/archiver:latest
         command: ["python",  "main.py"]
