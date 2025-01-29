@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: archiver-everything-archiver-cfg
+  namespace: archive-everything
+data:
+  ARCHIVER_SERVER: 'archiver-service'
