@@ -9,12 +9,19 @@ spec:
       app: archiver
   replicas: 1
   template:
+    metadata:
+      labels:
+        app: archiver
     spec:
-      metadata:
-        labels:
-          app: archiver
       containers:
       - name: archiver-pods
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         port: 50001
         image: archive-everything/archiver:latest
         command: ["python",  "main.py"]
