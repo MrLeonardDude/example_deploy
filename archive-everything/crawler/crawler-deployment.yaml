@@ -5,6 +5,12 @@ metadata:
   namespace: archive-everything
 spec:
   template:
+    metadata:
+      annotations:
+        proxy.istio.io/config: |
+          holdApplicationUntilProxyStarts: true
+      labels:
+        app: crawler
     spec:
       restartPolicy: OnFailure
       containers:
