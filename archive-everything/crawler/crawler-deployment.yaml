@@ -15,7 +15,7 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: archive-everything-crawler-cron
-        image: archive-everything-crawler:2201
+        image: archive-everything-crawler:2202
         command: ["python",  "main.py"]
         envFrom:
           - configMapRef:
