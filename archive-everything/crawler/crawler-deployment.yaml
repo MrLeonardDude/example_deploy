@@ -9,14 +9,13 @@ spec:
       annotations:
         proxy.istio.io/config: |
           holdApplicationUntilProxyStarts: true
-          exitOnZero: true
       labels:
         app: crawler
     spec:
       restartPolicy: OnFailure
       containers:
       - name: archive-everything-crawler-cron
-        image: archive-everything-crawler:2200
+        image: archive-everything-crawler:2201
         command: ["python",  "main.py"]
         envFrom:
           - configMapRef:
