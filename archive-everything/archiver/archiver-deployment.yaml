@@ -21,10 +21,10 @@ spec:
         resources:
           requests:
             memory: "64Mi"
-            cpu: "250m"
+            cpu: "100m"
           limits:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "50m"
         image: archive-everything-archiver:126
         command: ["python",  "main.py"]
         ports:
